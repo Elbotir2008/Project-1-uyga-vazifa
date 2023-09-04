@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Project</title>
+    <link
+      rel="stylesheet"
+      href="./dist/bootstrap-5.3.0-dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="overflow-x-hidden">
+    <div class="container-fluid">
+      <div class="row">
+        <form action="#" class="form-control d-flex p-4">
+          <input
+            type="text"
+            placeholder="F.I.SH"
+            id="search-box"
+            class="form-control"
+          />
+          <select
+            value="Lavozim turini tanlang"
+            class="form-select bg-primary text-white w-50"
+            id="filter"
+          >
+            <option class="">Lavozim turini tanlang</option>
+            <option class="">Junior</option>
+            <option class="">Middle</option>
+            <option class="">Senior</option>
+          </select>
+          <select
+            value="Manzilni tanlang"
+            class="form-select bg-secondary text-white w-50"
+            id="filter2"
+          >
+            <option class="">Manzilni tanlang</option>
+            <option class="">Bukhara</option>
+            <option class="">Samarqand</option>
+            <option class="">Toshkent</option>
+            <option class="">Farg'ona</option>
+          </select>
+          <button
+            type="button"
+            class="btn btn-success col-2"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            id="btn-add"
+          >
+            Qo'shish
+          </button>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Add student
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form id="student-form">
+                    <label class="form-label" for="firstName">Firstname</label>
+                    <input
+                      class="form-control mb-3"
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                    />
+                    <label class="form-label" for="lastName">Lastname</label>
+                    <input
+                      class="form-control mb-3"
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                    />
+                    <label for="input-group">Manzilni tanlang</label>
+                    <select
+                      class="form-select mb-3"
+                      style="max-width: 150px !important"
+                      name="input-group"
+                      id="input-group"
+                    >
+                      <option value="Bukhara">Bukhara</option>
+                      <option value="Samarqand">Samarqand</option>
+                      <option value="Toshkent">Toshkent</option>
+                      <option value="Farg'ona">Farg'ona</option>
+                    </select>
+                    <label for="date">Tug'ilgan kuni tanlang</label>
+                    <input type="date" class="form-control" id="date" />
+                    <label for="lavozim">Lavozim</label>
+                    <select
+                      class="form-select mb-3"
+                      style="max-width: 150px !important"
+                      name="group"
+                      id="lavozim"
+                    >
+                      <option value="React">React</option>
+                      <option value="nodeJs">nodeJs</option>
+                      <option value="Go">Go</option>
+                      <option value="Pyhton">Pyhton</option>
+                    </select>
+                    <label for="lavozim-turi">Lavozim turi</label>
+                    <select
+                      class="form-select mb-3"
+                      style="max-width: 150px !important"
+                      name="group"
+                      id="lavozim-turi"
+                    >
+                      <option value="Junior">Junior</option>
+                      <option value="Middle">Middle</option>
+                      <option value="Senior">Senior</option>
+                    </select>
+                    <label for="maosh">Lavozim</label>
+                    <input
+                      type="number"
+                      id="maosh"
+                      step="100"
+                      class="form-control"
+                    />
+                    <input type="checkbox" id="doesWork" name="doesWork" />
+                    <label for="doesWork">Uylanganmi ?</label>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    id="btn-save"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="row ms-2">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Familya</th>
+                <th scope="col">Ism</th>
+                <th scope="col">Manzil</th>
+                <th scope="col">Tug'ilgan kuni</th>
+                <th scope="col">Lavozim</th>
+                <th scope="col">Lavozim turi</th>
+                <th scope="col">Maoshi</th>
+                <th scope="col">Uylanganmi</th>
+              </tr>
+            </thead>
+            <tbody id="students-data"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="./dist/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
